@@ -17,6 +17,7 @@ public class CameraFollow360 : MonoBehaviour
         {
             Vector3 targetPos = player.transform.position + player.transform.up * height - player.transform.forward * distance;
             targetPos.x = 0; //for the camera lock to x position
+            targetPos.z = player.transform.position.z-6f;
             this.transform.position = Vector3.Lerp(this.transform.position, targetPos, Time.deltaTime * cameraSpeed * 0.1f);
         }
     }

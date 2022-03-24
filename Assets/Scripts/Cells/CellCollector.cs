@@ -97,6 +97,8 @@ public class CellCollector : MonoBehaviour
 
         if (other.gameObject.tag == "FinishLine")
         {
+            StartCoroutine(AnimateRotationTowards(player.transform, Quaternion.identity, 1f));       
+
             DressMovement[] dress = FindObjectsOfType<DressMovement>();
             foreach (DressMovement a in dress)
             {
@@ -147,6 +149,19 @@ public class CellCollector : MonoBehaviour
 
         levelManager.LevelCompletedScreen();
 
+    }
+
+    private System.Collections.IEnumerator AnimateRotationTowards(Transform target, Quaternion rot, float dur)
+    {
+        float t = 0f;
+        Quaternion start = target.rotation;
+        while (t < dur)
+        {
+            target.rotation = Quaternion.Slerp(start, rot, t / dur);
+            yield return null;
+            t += Time.deltaTime;
+        }
+        target.rotation = rot;
     }
 
 }

@@ -349,6 +349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   gameFinished: 0
+  SpinTheWheel: {fileID: 1851123069246540145}
 --- !u!114 &1851123069246540143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,7 +362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a348975f8a06e2040a57bc9772ab3bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 3
   mouseInput: {fileID: 0}
   minLimitAmount: -1.45
   maxLimitAmount: 1.45
@@ -389,15 +390,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1851123069412456775}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1851123069532707803}
   - {fileID: 1851123068860012065}
   - {fileID: 1851123069704000985}
   - {fileID: 1851123070224954249}
-  m_Father: {fileID: 1851123070141647677}
-  m_RootOrder: 1
+  m_Father: {fileID: 1851123070000392410}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1851123069434533496
 GameObject:
@@ -781,6 +782,7 @@ Transform:
   - {fileID: 1851123068620604835}
   - {fileID: 1851123069434533499}
   - {fileID: 1851123069876647437}
+  - {fileID: 1851123069412456774}
   m_Father: {fileID: 1851123070141647677}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -813,7 +815,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1851123070000392410}
-  - {fileID: 1851123069412456774}
   m_Father: {fileID: 1851123069084142233}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

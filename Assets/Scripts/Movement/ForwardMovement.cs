@@ -9,6 +9,8 @@ public class ForwardMovement : Movement
     [HideInInspector]
     public bool gameFinished=false;
 
+    public GameObject SpinTheWheel;
+
     /*------------------------------------------------------------------------------------------------------------------*/
 
     private void Awake()
@@ -24,10 +26,16 @@ public class ForwardMovement : Movement
             {
                 levelmanager.StartTheGame();
                 Move(Vector3.forward);
+                SpinTheWheel.transform.Rotate(0, 10f, 0.0f);
+
             }
 
             if (Input.GetMouseButtonUp(0))
+            {
                 Move(Vector3.zero);
+                SpinTheWheel.transform.Rotate(0, 0, 0);
+            }
+               
         }
 
         else
